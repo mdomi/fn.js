@@ -158,7 +158,7 @@
         }
         
         //Attach properties to exports.
-        module.exports = fn;
+        exports.fn = fn;
         
         return fn;
     });
