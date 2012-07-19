@@ -1,0 +1,8 @@
+{
+    "name" : "fn.js",
+    "description" : "A set of tools to use to aide in writing functional JavaScript.",
+    "homepage" : "https://github.com/mdomi/fn.js",
+    "keywords" : ["util", "functional"],
+    "author" : "Michael Dominice <mike@mikedominice.com>",
+    "version" : "0.1.0"
+}
