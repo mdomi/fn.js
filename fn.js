@@ -49,6 +49,12 @@
                 };
             };
             
+            transforms.prepend = function(prefix) {
+                return function (string) {
+                    return prefix + string;
+                };
+            }
+            
             return transforms;
             
         }).call(this);
