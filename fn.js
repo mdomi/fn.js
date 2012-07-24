@@ -5,8 +5,8 @@
 (function (define) {
     define('fn', function (require, exports) {
         
-        var hasOwnProp = Object.prototype.hasOwnProperty,
-        fn = {};
+        var hasOwnProp = Object.prototype.hasOwnProperty;
+        var fn = {};
         
         // transforms are functions that return functions that transform a variable.
         // useful for passing to things like map().
@@ -53,7 +53,7 @@
                 return function (string) {
                     return prefix + string;
                 };
-            }
+            };
             
             return transforms;
             
@@ -99,6 +99,24 @@
                 }
                 return function (object) {
                     return matchers.neq(object, value);
+                };
+            };
+            
+            matchers.contains = function (array, other) {
+                if (arguments.length > 1) {
+                    if (!(array && array.length)) {
+                        return false;
+                    }
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] === other) {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+                // array is actually a value to search for
+                return function (actualArray) {
+                    return matchers.contains(actualArray, array);
                 };
             };
             
