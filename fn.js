@@ -1,7 +1,8 @@
 // fn.js
 // (c) 2012 Michael Dominice
 // fn.js is freely distributable under the MIT license.
-// Portions of fn are inspired by and intended for use with the Underscore library.
+// Portions of fn are inspired by and intended for use with the Underscore
+// library.
 (function (root, factory) {
     if (typeof exports === 'object') {
         // Node. Does not work with strict CommonJS, but
@@ -88,7 +89,7 @@
     }).call(this);
 
     // matchers are functions return functions that compare an object to a set of conditions.
-    // userful for passing to bulk filtering functions.
+    // useful for passing to bulk filtering functions.
     // should support partial application.
     fn.matchers = (function () {
 
