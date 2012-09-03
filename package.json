@@ -5,6 +5,9 @@
     "keywords" : ["util", "functional"],
     "author" : "Michael Dominice <mike@mikedominice.com>",
     "version" : "0.1.0",
+    "scripts" : {
+        "test" : "mocha test"
+    },
     "devDependencies" : {
     	"mocha" : "1.4.1",
     	"expect" : "0.1.2",
