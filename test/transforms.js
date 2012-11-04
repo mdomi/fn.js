@@ -1,4 +1,6 @@
+/*global describe:false, it:false, require:false*/
 (function (fn, expect, sinon) {
+    'use strict';
 
     describe('fn.transforms', function () {
 
@@ -8,7 +10,7 @@
 
         });
 
-        describe('property', function () {
+        describe('#property()', function () {
 
             it('should return functions that pick off object properties', function () {
 
@@ -22,9 +24,9 @@
 
         });
 
-        describe('modelAttribute', function () {
+        describe('#modelAttribute()', function () {
 
-            it('should return functions that retrieve Backbone model style attributes', function () {
+            it('creates functions that retrieve Backbone model style attributes', function () {
 
                 var nameAttributeTransform = fn.modelAttribute('name');
 
@@ -39,7 +41,7 @@
             });
         });
 
-        describe('not', function () {
+        describe('#not()', function () {
 
             it('should return functions that return the boolean opposite of inputs', function () {
 
@@ -65,7 +67,7 @@
             });
         });
 
-        describe('negate', function () {
+        describe('#negate()', function () {
 
             it('should return functions that negate inputs', function () {
 
@@ -89,7 +91,7 @@
             });
         });
 
-        describe('toInteger', function () {
+        describe('#toInteger()', function () {
 
             it('should return functions that convert inputs to base 10 integers', function () {
 
@@ -117,7 +119,7 @@
 
         });
 
-        describe('replace', function () {
+        describe('#replace()', function () {
 
             it('should return functions that replace occurences of a regex match', function () {
 
@@ -131,7 +133,7 @@
 
         });
 
-        describe('prepend', function () {
+        describe('#prepend()', function () {
 
             it('should return functions the prepend a string to their inputs', function () {
 

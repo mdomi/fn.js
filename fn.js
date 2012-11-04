@@ -3,7 +3,9 @@
 // fn.js is freely distributable under the MIT license.
 // Portions of fn are inspired by and intended for use with the Underscore
 // library.
+/*global define:false, module:false*/
 (function (root, factory) {
+    'use strict';
     if (typeof exports === 'object') {
         // Node. Does not work with strict CommonJS, but
         // only CommonJS-like enviroments that support module.exports,
@@ -19,7 +21,7 @@
         root.fn = factory();
     }
 }(this, function () {
-
+    'use strict';
     var hasOwnProp = Object.prototype.hasOwnProperty;
     var fn = {};
 
