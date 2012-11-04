@@ -32,6 +32,18 @@
 
                 expect(lowerCaseTransform('Foo BAR another')).to.be('foo bar another');
             });
+        
+        });
+
+        describe('#toUpperCase()', function () {
+
+            it ('returns a function that transforms a string into upper case', function () {
+
+                var upperCaseTransform = fn.toUpperCase();
+
+                expect(upperCaseTransform('Foo BAR another')).to.be('FOO BAR ANOTHER');
+            });
+        
         });
 
         describe('#modelAttribute()', function () {

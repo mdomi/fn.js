@@ -97,6 +97,11 @@
             return toLowerCase;
         };
 
+        var toUpperCase = caller('toUpperCase');
+        transforms.toUpperCase = function () {
+            return toUpperCase;
+        };
+
         return transforms;
 
     }).call(this);
