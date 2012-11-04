@@ -24,6 +24,16 @@
 
         });
 
+        describe('#toLowerCase()', function () {
+
+            it ('returns a function that transforms a string into lower case', function () {
+
+                var lowerCaseTransform = fn.toLowerCase();
+
+                expect(lowerCaseTransform('Foo BAR another')).to.be('foo bar another');
+            });
+        });
+
         describe('#modelAttribute()', function () {
 
             it('creates functions that retrieve Backbone model style attributes', function () {

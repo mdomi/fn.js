@@ -86,6 +86,17 @@
             };
         };
 
+        var caller = function (name) {
+            return function (object) {
+                return object[name].apply(object);
+            };
+        };
+
+        var toLowerCase = caller('toLowerCase');
+        transforms.toLowerCase = function () {
+            return toLowerCase;
+        };
+
         return transforms;
 
     }).call(this);
